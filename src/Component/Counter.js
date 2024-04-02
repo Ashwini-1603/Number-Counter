@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {faTrash,faPlay,faStop} from "@fortawesome/free-solid-svg-icons"
+import{faTrash,faPause ,faPlay} from "@fortawesome/free-solid-svg-icons"
         function Counter({ onDelete }) {
             const [count, setCount] = useState(0);
           const [paused, setPaused] = useState(false);
@@ -42,15 +42,18 @@ import {faTrash,faPlay,faStop} from "@fortawesome/free-solid-svg-icons"
             }
           }
         }
+     
           return (
             <div className='counter-container bg-success bg-opacity-25 rounded-1'>  
             <div className='inner-container'>
             <h1> {count}</h1>
-            <button className='m-2 px-2 btn btn-warning'  onClick={togglePause}>{paused ? <FontAwesomeIcon icon={faPlay} /> : <FontAwesomeIcon icon={faStop} />}</button>
+            <button className='m-2 px-2 btn btn-success'  onClick={incrementCount}>Start</button>
+            {/* <button onClick={togglePause}>Pause</button> */}
+            <button className='m-2 px-2 btn btn-warning btn-style'  onClick={togglePause}>{paused ? <FontAwesomeIcon icon={faPlay} /> : <FontAwesomeIcon icon={faPause} />}</button>
             <button className='m-1 px-1 btn btn-secondary btn-style'  onClick={incrementCount}>+</button>
             <button className='m-1 px-1 btn btn-secondary btn-style'  onClick={decrementCount}>-</button>
-            <button className='m-2 px-2 btn btn-danger btn-style'  onClick={onDelete}> <FontAwesomeIcon icon={faTrash} /></button>
-           
+            <button className='m-2 px-2 btn btn-danger btn-style'  onClick={onDelete}><FontAwesomeIcon icon={faTrash} /></button>
+          
           </div></div>
          
           )
