@@ -52,5 +52,7 @@ media query for mobile */
   .counter-container{
     width: 300px;
   }
-
+  .add{
+    height: 700px;
+  }
 }
