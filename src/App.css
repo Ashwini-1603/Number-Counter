@@ -1,7 +1,10 @@
 .App {
   text-align: center;
- 
+
   
+}
+.btn-style{
+  width: 30px;
 }
 .counter-container{
   background-color: yellow;
@@ -16,6 +19,9 @@
 .inner-container{
   width: 200px;
   margin: auto;
+}
+h1{
+  font-size: 70px;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -53,6 +59,6 @@ media query for mobile */
     width: 300px;
   }
   .add{
-    height: 700px;
+    height: 1200px;
   }
 }

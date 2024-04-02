@@ -21,7 +21,7 @@ function App() {
       <button type="button" className="btn btn-primary my-3" onClick={addCounter}><h3>Add Counter</h3></button>
       <div className='add my-3 bg-danger p-2 text-dark bg-opacity-25'>
       {counters.map((counter, index) => (
-        <div  key={index}>{counter}</div>
+        <div   key={index}>{counter}</div>
       ))}
       </div>
      
